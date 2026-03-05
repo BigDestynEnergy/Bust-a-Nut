@@ -8,7 +8,8 @@ const headerTabs = [
 
 const icons = [
     {label: 'Store', icon: '👜'},
-    {label: 'User', icon: '👤'}
+    {label: 'User', icon: '👤'},
+    {label: 'Theme', icon: '🌑'}
 ]
 
 
