@@ -1,0 +1,26 @@
+@media(max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+    .home header h1{
+    font-size: 1.4rem;
+    }
+    .home header .profile-menu{
+        margin-right: 180px;
+        margin-top: 40px;
+    }
+}
+
+.loading-page button{
+  width: 300px;
+  padding: 8px;
+  background: var(--white);
+  color: var(--body);
+  border: none;
+  border-radius: 8px;
+}
+
+.loading-page button:hover{
+  background: var(--text);
+}
+
