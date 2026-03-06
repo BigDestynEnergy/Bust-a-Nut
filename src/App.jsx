@@ -1,4 +1,5 @@
 import './App.css'
+import './Styles/profile page.css'
 import { useState } from 'react';
 import LoginForm from './Components/Login';
 import LoginHeader from './Components/Login Header';
@@ -9,10 +10,11 @@ import Home from './Components/Home Page';
 import HomeHeader from './Components/Home Header';
 import Redirectory from './Components/redirectory';
 import './Styles/Responsiveness.css'
+import Profile from './Components/profile';
 
 export default function App(){
 
- const [screen, setScreen] = useState('redirectory');
+ const [screen, setScreen] = useState('profile');
  const [email, setEmail] = useState('')
  const [password, setPassword] = useState('')
  const [hide, setHide] = useState(false)
@@ -26,6 +28,7 @@ export default function App(){
  const [passwordC, setPasswordC] = useState('')
  const [user, setUser] = useState('')
  const [currentUser, setCurrentUser] = useState(null)
+ const [username, setUsername] = useState('')
   return(
     <main>
       {screen === 'date' && (
@@ -56,7 +59,7 @@ export default function App(){
         password={password}
         hide={hide}
         setHide={setHide}
-        setCuurentUser={setCurrentUser}
+        setCurrentUser={setCurrentUser}
         setPassword={setPassword}
         setScreen={setScreen}
         note={note}
@@ -102,6 +105,19 @@ export default function App(){
       {screen === 'redirectory' && (
         <div className="loading-page">
           <Redirectory setScreen={setScreen}/>
+        </div>
+      )}
+
+      {screen === 'profile' && (
+        <div className="profile-page">
+          <HomeHeader currentUser={currentUser}
+          setCurrentUser={setCurrentUser}/>
+          <Profile 
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+          username={username}
+          setUsername={setUsername}
+          setScreen={setScreen}/>
         </div>
       )}
 

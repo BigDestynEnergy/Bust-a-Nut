@@ -8,8 +8,9 @@ const headerTabs = [
 
 const icons = [
     {label: 'Store', icon: '👜'},
-    {label: 'User', icon: '👤'},
-    {label: 'Theme', icon: '🌑'}
+    
+    {label: 'Theme', icon: '🌑'},
+    {label: 'User', icon: '👤'}
 ]
 
 
@@ -30,7 +31,7 @@ export default function HomeHeader({setScreen, setCurrentUser, currentUser}){
 
     return(
         <header>
-            <h1>ABANTUVERSE</h1>
+            <h1>BUST</h1>
             <nav className="header-buttons">{headerTabs.map(btn => 
                 (<button id={btn.id}>
                     {btn.label}
@@ -65,7 +66,7 @@ export default function HomeHeader({setScreen, setCurrentUser, currentUser}){
             {currentUser?.name}
         </div>
 
-        <button>Profile</button>
+        <button onClick={()=>{setScreen('profile')}}>Profile</button>
         <button>Account Settings</button>
        <button onClick={()=>{
         handleLogout();
